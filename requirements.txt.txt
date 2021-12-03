@@ -1,0 +1,6 @@
+pandas
+json 
+requests
+streamlit
+yfinance
+base64
