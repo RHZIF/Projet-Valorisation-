@@ -21,7 +21,7 @@ end = st.date_input('End', value = pd.to_datetime('today'))
 #                       end, 
 #                       progress=False)
 
-df = investpy.get_stock_historical_data(dropdown,
+df = py.get_stock_historical_data(dropdown,
                                         dropdown1,
                                         start,
                                         end)
