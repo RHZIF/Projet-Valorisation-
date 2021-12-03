@@ -8,9 +8,9 @@ import base64
 
 
 
-st.title("Portfolio simulation dashboard")
+st.title("stock data scraper")
 tickers = {"atvi","adbe","amd","alxn","algn","goog","googl","amzn","amgn","adi","anss","aapl","amat","amat","asml","adsk","adp","bidu","biib","bmrn","bkng","avgo","cdns","cdw","cern","chtr","chkp","ctas","csco","ctxs","ctsh","cmcsa","cprt","cost","csx","dxcm","docu","dltr","ebay","ea","exc","expe","fb","fast","fisv","fox","foxa","gild","idxx","ilmn","incy","intc","intu","isrg","jd","klac","lrcx","lbtya","lbtyk","lulu","mar","mxim","meli","mchp","mu","msft","mrna","mdlz","mnst","ntes","nflx","nvda","nxpi","orly","pcar","payx","pypl","pep","pdd","qcom","regn","rost","sgen","siri","swks","splk","sbux","snps","tmus","ttwo","tsla","txn","khc","tcom","ulta","vrsn","vrsk","vrtx","wba","wdc","wday","xel","xlnx","zm"}
-dropdown = st.selectbox("Pick your assets", tickers)
+dropdown = st.selectbox("Pick a stock", tickers)
 start = st.date_input('Start', value = pd.to_datetime('2000-01-01'))
 end = st.date_input('End', value = pd.to_datetime('today'))
 
