@@ -1,4 +1,5 @@
 yfinance==0.1.67
+investpy
 pandas
 requests
 streamlit
