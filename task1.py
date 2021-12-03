@@ -6,13 +6,6 @@ import codecs
 import yfinance as yf
 import base64
 import investpy as py
-import Casabourselib as cbl 
-from bs4 import BeautifulSoup
-import re
-import sys
-import os
-import http.cookiejar
-import urllib.request, urllib.error, urllib.parse
 
 
 st.title("Portfolio simulation dashboard")
