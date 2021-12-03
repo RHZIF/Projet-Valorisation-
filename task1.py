@@ -16,12 +16,15 @@ start = st.date_input('Start', value = pd.to_datetime('2000-01-01'))
 end = st.date_input('End', value = pd.to_datetime('today'))
 
 
-df = yf.download(dropdown,
-                      start, 
-                      end, 
-                      progress=False)
+# df = yf.download(dropdown,
+#                       start, 
+#                       end, 
+#                       progress=False)
 
-
+df = investpy.get_stock_historical_data(dropdown,
+                                        dropdown1,
+                                        start,
+                                        end)
 
 
 st.line_chart(df.Close)
