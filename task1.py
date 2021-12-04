@@ -119,7 +119,7 @@ def crypto():
 
     df=py.get_crypto_historical_data(crypto=dropdown, from_date=start, to_date=end)
 
-    url = get_image(str(dropdown))
+    url = get_image(str(dropdown) + ' crypto')
     print(url)
     url = str(url)
 
