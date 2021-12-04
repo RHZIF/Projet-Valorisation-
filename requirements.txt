@@ -3,3 +3,5 @@ investpy
 pandas
 requests
 streamlit
+bs4
+
