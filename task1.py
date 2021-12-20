@@ -21,10 +21,10 @@ def get_image(ticker):
 
 st.title("Projet Analyse Technique")
 
-dropdown = st.selectbox("Pick your assets", py.get_stocks(country='morocco').name)
-ma = st.selectbox("Pick your assets", [15,30,45,60])
-start = st.date_input('Start', value =pd.to_datetime('01-01-2000'))
-end = st.date_input('End', value = pd.to_datetime('today'))
+dropdown = st.selectbox("Choisir une action", py.get_stocks(country='morocco').name)
+ma = st.selectbox("Choisir une periode pour calculer la moyenne mobile (en jours)", [15,30,45,60])
+start = st.date_input('Debut', value =pd.to_datetime('01-01-2020'))
+end = st.date_input('Fin', value = pd.to_datetime('today'))
 
 start = start.strftime('%d/%m/%Y')
 end = end.strftime('%d/%m/%Y')
