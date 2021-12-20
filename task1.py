@@ -3,11 +3,6 @@ import pandas as pd
 import requests
 import investpy as py
 from bs4 import BeautifulSoup
-import streamlit as st
-import pandas as pd 
-import requests
-import investpy as py
-from bs4 import BeautifulSoup
 import plotly.express as px
 
 def ticker_2_CodeValeur(ticker):
@@ -46,10 +41,6 @@ print(url)
 url = str(url)
 
 st.markdown('<center><img src="'+url+'" alt="stock logo"></center>', unsafe_allow_html=True)
-
-ax = df.Close.plot()
-df['Moving Average'].plot(ax=ax)
-
 
 data = [df['Close'], df['Moving Average']]
 headers = ["Close", "Moving Average"]
