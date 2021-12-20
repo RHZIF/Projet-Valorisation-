@@ -21,6 +21,9 @@ def get_image(ticker):
 
 st.title("Projet Analyse Technique")
 
+st.markdown('Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
+
+
 dropdown = st.selectbox("Choisir une action", py.get_stocks(country='morocco').name)
 ma = st.selectbox("Choisir une periode pour calculer la moyenne mobile (en jours)", [15,30,45,60])
 start = st.date_input('Debut', value =pd.to_datetime('01-01-2020'))
