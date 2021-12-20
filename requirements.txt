@@ -4,4 +4,5 @@ pandas
 requests
 streamlit
 bs4
+plotly
 
