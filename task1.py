@@ -59,5 +59,5 @@ fig = px.line(df3)
 
 col1.plotly_chart(fig, use_container_width=False, sharing="streamlit")
 indicators = cbl.get_indicators(ticker)
-col2.dataframe(indicators)
+col1.dataframe(indicators)
 
