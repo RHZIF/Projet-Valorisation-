@@ -35,7 +35,8 @@ st.markdown("""
 
 @st.cache(ttl=3600, max_entries=10)   #-- Magic command to cache data
     
-st.sidebar.markdown("## Selectioner le titre et la periode ")
+# st.sidebar.markdown("## Selectioner le titre et la periode ")
+
 
 
 st.markdown('## Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
