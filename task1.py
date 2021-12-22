@@ -34,7 +34,7 @@ st.sidebar.markdown("## Selectioner le titre et la periode ")
 
 
 st.markdown('<center><img src="https://raw.githubusercontent.com/RHZIF/streamlit_test/main/ensa.png" width="300"  height="100" alt="Ensa logo"></center>', unsafe_allow_html=True)
-st.markdown('### Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
+st.markdown('### Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir et Anware Adnane. Filière: finance et ingenierie decisionnelle')
 st.markdown("### Sous l'encadrement de Pr. Soukaina Hadiri")
 st.markdown('##')
 st.markdown('__________________________________________________________')
