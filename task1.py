@@ -41,7 +41,7 @@ st.markdown("""
 
 st.markdown('## Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
 
-col1,col3, col2 = st.columns(3)
+# col1,col3, col2 = st.columns(3)
 
 
 select_event = .selectbox('How do you want to find data?',
