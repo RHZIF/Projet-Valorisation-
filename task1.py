@@ -44,9 +44,6 @@ st.markdown('## Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anwar
 col1,col3, col2 = st.columns(3)
 
 
-select_event = .selectbox('How do you want to find data?',
-                                    ['By event name', 'By GPS'])
-
 dropdown = st.sidebar.selectbox("Choisir une action", py.get_stocks(country='morocco').name)
 ma = st.sidebar.selectbox("Periode de calcule de la moyenne mobile (en jours)", [15,30,45,60])
 
