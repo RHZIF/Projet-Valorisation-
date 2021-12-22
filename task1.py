@@ -19,20 +19,40 @@ def get_image(ticker):
   logo_url = 'https://www.casablanca-bourse.com/bourseweb/' + logo_path
   return logo_url
 
+apptitle = 'Projet valorisation'
 
-st.title("Projet Analyse Technique")
+st.set_page_config(page_title=apptitle, page_icon=":eyeglasses:")
 
-st.markdown('Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
+# Title the app
+st.title('Gravitational Wave Quickview')
+
+st.markdown("""
+ * Use the menu at left to select data and set plot parameters
+ * Your plots will appear below
+""")
+
+@st.cache(ttl=3600, max_entries=10)   #-- Magic command to cache data
+
+@st.cache(ttl=3600, max_entries=10)   #-- Magic command to cache data
+    
+st.sidebar.markdown("## Selectioner le titre et la periode ")
+
+
+st.markdown('## Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
 
 col1,col3, col2 = st.columns(3)
 
-dropdown = col1.selectbox("Choisir une action", py.get_stocks(country='morocco').name)
-ma = col1.selectbox("Periode de calcule de la moyenne mobile (en jours)", [15,30,45,60])
+
+select_event = .selectbox('How do you want to find data?',
+                                    ['By event name', 'By GPS'])
+
+dropdown = st.sidebar.selectbox("Choisir une action", py.get_stocks(country='morocco').name)
+ma = st.sidebar.selectbox("Periode de calcule de la moyenne mobile (en jours)", [15,30,45,60])
 
 
 
-start = col2.date_input('Debut', value =pd.to_datetime('01-01-2020'))
-end = col2.date_input('Fin', value = pd.to_datetime('today'))
+start = st.sidebar.date_input('Debut', value =pd.to_datetime('01-01-2020'))
+end = st.sidebar.date_input('Fin', value = pd.to_datetime('today'))
 
 start = start.strftime('%d/%m/%Y')
 end = end.strftime('%d/%m/%Y')
