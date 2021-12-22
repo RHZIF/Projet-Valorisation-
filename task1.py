@@ -31,17 +31,17 @@ st.markdown("""
  * Your plots will appear below
 """)
 
-@st.cache(ttl=3600, max_entries=10)   #-- Magic command to cache data
+# @st.cache(ttl=3600, max_entries=10)   #-- Magic command to cache data
 
-@st.cache(ttl=3600, max_entries=10)   #-- Magic command to cache data
+# @st.cache(ttl=3600, max_entries=10)   #-- Magic command to cache data
     
-# st.sidebar.markdown("## Selectioner le titre et la periode ")
+st.sidebar.markdown("## Selectioner le titre et la periode ")
 
 
 
 st.markdown('## Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
 
-# col1,col3, col2 = st.columns(3)
+col1,col3, col2 = st.columns(3)
 
 
 select_event = .selectbox('How do you want to find data?',
