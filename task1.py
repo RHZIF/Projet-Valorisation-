@@ -39,7 +39,7 @@ st.sidebar.markdown("## Selectioner le titre et la periode ")
 
 
 
-st.markdown('# Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
+st.markdown('### Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
 st.markdown('# ')
 st.markdown('__________________________________________________________')
 
@@ -69,6 +69,9 @@ print(url)
 url = str(url)
 
 col1.markdown('<center><img src="'+url+'" alt="stock logo"></center>', unsafe_allow_html=True)
+st.markdown('__________________________________________________________')
+
+
 indicators = cbl.get_indicators(ticker)
 col1.dataframe(indicators)
 
