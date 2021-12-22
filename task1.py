@@ -39,7 +39,7 @@ st.markdown("### Sous l'encadrement de Pr. Soukaina Hadiri")
 st.markdown('##')
 st.markdown('__________________________________________________________')
 
-st.sidebar.markdown('<img src="https://raw.githubusercontent.com/RHZIF/streamlit_test/main/ensa.png" width="100"  height="300" alt="Ensa logo">', unsafe_allow_html=True)
+st.sidebar.markdown('<img src="https://raw.githubusercontent.com/RHZIF/streamlit_test/main/ensa.png" width="300"  height="100" alt="Ensa logo">', unsafe_allow_html=True)
 
 dropdown = st.sidebar.selectbox("Choisir une action", py.get_stocks(country='morocco').name)
 ma = st.sidebar.selectbox("Periode de calcule de la moyenne mobile (en jours)", [15,30,45,60])
