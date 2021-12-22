@@ -47,7 +47,7 @@ url = get_image(ticker)
 print(url)
 url = str(url)
 
-st.markdown('<center><img src="'+url+'" alt="stock logo"></center>', unsafe_allow_html=True)
+col1.markdown('<center><img src="'+url+'" alt="stock logo"></center>', unsafe_allow_html=True)
 
 data = [df['Close'], df['Moving Average']]
 headers = ["Close", "Moving Average"]
@@ -56,6 +56,6 @@ df3 = pd.concat(data, axis=1, keys=headers)
 
 fig = px.line(df3)
 
-st.plotly_chart(fig, use_container_width=False, sharing="streamlit")
+col2.plotly_chart(fig, use_container_width=False, sharing="streamlit")
 
 
