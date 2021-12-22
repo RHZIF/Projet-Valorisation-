@@ -66,18 +66,18 @@ st.markdown('<center><img src="'+url+'" alt="stock logo"></center>', unsafe_allo
 
 st.markdown('__________________________________________________________')
 
+data = [df['Close'], df['Moving Average']]
+headers = ["Close", "Moving Average"]
+df3 = pd.concat(data, axis=1, keys=headers)
+fig = px.line(df3)
+st.plotly_chart(fig, use_container_width=False, sharing="streamlit")
 
 indicators = cbl.get_indicators(ticker)
 st.dataframe(indicators)
 
-data = [df['Close'], df['Moving Average']]
-headers = ["Close", "Moving Average"]
-df3 = pd.concat(data, axis=1, keys=headers)
+dividends = cbl.get_dividends(ticker)
+st.dataframe(dividends)
 
-
-fig = px.line(df3)
-
-st.plotly_chart(fig, use_container_width=False, sharing="streamlit")
 
 
 
