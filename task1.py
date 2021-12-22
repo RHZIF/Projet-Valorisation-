@@ -23,11 +23,15 @@ st.title("Projet Analyse Technique")
 
 st.markdown('Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
 
+col1, col2 = st.columns(2)
 
-dropdown = st.selectbox("Choisir une action", py.get_stocks(country='morocco').name)
-ma = st.selectbox("Choisir une periode pour calculer la moyenne mobile (en jours)", [15,30,45,60])
-start = st.date_input('Debut', value =pd.to_datetime('01-01-2020'))
-end = st.date_input('Fin', value = pd.to_datetime('today'))
+dropdown = col1.selectbox("Choisir une action", py.get_stocks(country='morocco').name)
+ma = col1.selectbox("Choisir une periode pour calculer la moyenne mobile (en jours)", [15,30,45,60])
+
+
+
+start = col2.date_input('Debut', value =pd.to_datetime('01-01-2020'))
+end = col2.date_input('Fin', value = pd.to_datetime('today'))
 
 start = start.strftime('%d/%m/%Y')
 end = end.strftime('%d/%m/%Y')
