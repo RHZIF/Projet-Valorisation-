@@ -21,7 +21,7 @@ def get_image(ticker):
 
 apptitle = 'Projet valorisation'
 
-st.set_page_config(page_title=apptitle, page_icon=":eyeglasses:")
+st.set_page_config(page_title=apptitle, page_icon=":stock:")
 
 # Title the app
 st.title('Valorisation des actions cotées en Bourse de Casablanca ')
