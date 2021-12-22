@@ -39,7 +39,9 @@ st.sidebar.markdown("## Selectioner le titre et la periode ")
 
 
 
-st.markdown('## Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
+st.markdown('# Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
+st.markdown('# ')
+st.markdown('__________________________________________________________')
 
 col1,col3, col2 = st.columns(3)
 
