@@ -24,12 +24,7 @@ apptitle = 'Projet valorisation'
 st.set_page_config(page_title=apptitle, page_icon=":eyeglasses:")
 
 # Title the app
-st.title('Gravitational Wave Quickview')
-
-st.markdown("""
- * Use the menu at left to select data and set plot parameters
- * Your plots will appear below
-""")
+st.title('Valorisation des actions cotées en Bourse de Casablanca ')
 
 # @st.cache(ttl=3600, max_entries=10)   #-- Magic command to cache data
 
@@ -40,7 +35,8 @@ st.sidebar.markdown("## Selectioner le titre et la periode ")
 
 
 st.markdown('### Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
-st.markdown('# ')
+st.markdown("### Sous l'encadrement de Pr. Soukaina Hadiri")
+st.markdown('##')
 st.markdown('__________________________________________________________')
 
 col1,col3, col2 = st.columns(3)
