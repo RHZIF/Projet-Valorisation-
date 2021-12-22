@@ -39,8 +39,6 @@ st.markdown("### Sous l'encadrement de Pr. Soukaina Hadiri")
 st.markdown('##')
 st.markdown('__________________________________________________________')
 
-col1,col3, col2 = st.columns(3)
-
 
 dropdown = st.sidebar.selectbox("Choisir une action", py.get_stocks(country='morocco').name)
 ma = st.sidebar.selectbox("Periode de calcule de la moyenne mobile (en jours)", [15,30,45,60])
@@ -64,12 +62,12 @@ url = get_image(ticker)
 print(url)
 url = str(url)
 
-col1.markdown('<center><img src="'+url+'" alt="stock logo"></center>', unsafe_allow_html=True)
+st.markdown('<center><img src="'+url+'" alt="stock logo"></center>', unsafe_allow_html=True)
 st.markdown('__________________________________________________________')
 
 
 indicators = cbl.get_indicators(ticker)
-col1.dataframe(indicators)
+st.dataframe(indicators)
 
 data = [df['Close'], df['Moving Average']]
 headers = ["Close", "Moving Average"]
@@ -78,7 +76,7 @@ df3 = pd.concat(data, axis=1, keys=headers)
 
 fig = px.line(df3)
 
-col1.plotly_chart(fig, use_container_width=False, sharing="streamlit")
+st.plotly_chart(fig, use_container_width=False, sharing="streamlit")
 
 
 
