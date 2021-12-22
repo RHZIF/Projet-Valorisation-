@@ -39,6 +39,7 @@ st.markdown("### Sous l'encadrement de Pr. Soukaina Hadiri")
 st.markdown('##')
 st.markdown('__________________________________________________________')
 
+st.sidebar.markdown('<img src="ensa.png" alt="Ensa logo">', unsafe_allow_html=True)
 
 dropdown = st.sidebar.selectbox("Choisir une action", py.get_stocks(country='morocco').name)
 ma = st.sidebar.selectbox("Periode de calcule de la moyenne mobile (en jours)", [15,30,45,60])
@@ -63,6 +64,7 @@ print(url)
 url = str(url)
 
 st.markdown('<center><img src="'+url+'" alt="stock logo"></center>', unsafe_allow_html=True)
+
 st.markdown('__________________________________________________________')
 
 
