@@ -24,7 +24,7 @@ st.title("Projet Analyse Technique")
 
 st.markdown('Realisé par: Yassine Rhzif, Ahmed Ouaboune, Mouad Rhafir, Anware Adnane')
 
-col1, col2 = st.columns(2)
+col1,col3, col2 = st.columns(3)
 
 dropdown = col1.selectbox("Choisir une action", py.get_stocks(country='morocco').name)
 ma = col1.selectbox("Periode de calcule de la moyenne mobile (en jours)", [15,30,45,60])
@@ -49,6 +49,8 @@ print(url)
 url = str(url)
 
 col1.markdown('<center><img src="'+url+'" alt="stock logo"></center>', unsafe_allow_html=True)
+indicators = cbl.get_indicators(ticker)
+col1.dataframe(indicators)
 
 data = [df['Close'], df['Moving Average']]
 headers = ["Close", "Moving Average"]
@@ -58,6 +60,6 @@ df3 = pd.concat(data, axis=1, keys=headers)
 fig = px.line(df3)
 
 col1.plotly_chart(fig, use_container_width=False, sharing="streamlit")
-indicators = cbl.get_indicators(ticker)
-col1.dataframe(indicators)
+
+
 
